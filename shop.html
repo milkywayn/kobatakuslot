@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ショップ</title>
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+    
+    <div id="shop-container">
+        <header class="shop-header">
+            <h1>ショップ</h1>
+            <div class="user-currency">
+                <p>所持コイン: 💰 <span id="coins-count">...</span></p>
+                <p>所持ポテト: 🥔 <span id="potato-count">...</span></p>
+                <p>コイン倍率:<span id="c-buff-count">...</span></p>
+                <p>ポテト増加量:<span id="p-buff-count">...</span></p>
+            </div>
+        </header>
+
+        <nav class="shop-tabs">
+            <button class="tab-button active" data-category="item">🪙 アイテム</button>
+            <button class="tab-button" data-category="buff">✨ バフアイテム</button>
+            <button class="tab-button" data-category="special">🌟 特別アイテム</button>
+        </nav>
+
+        <main id="item-list-container">
+            <div class="item-card item" id="item2-card" data-price="1" data-currency="potato">
+                <div class="item-icon">🪙</div>
+                <h3>コイン購入</h3>
+                <p class="description">コインを購入します。</p>
+                <div class="price-section">
+                    <span class="price-tag"> 🥔<span class="cost">1</span></span>
+                    <button class= "buy-button" id = "c-buy">購入</button>
+                </div>
+            </div>
+
+            <div class="item-card item" id="item4-card" data-price="1200" data-currency="coin">
+                <div class="item-icon">🥔</div>
+                <h3>ポテト購入</h3>
+                <p class="description">ポテトを購入します。</p>
+                <div class="price-section">
+                    <span class="price-tag">🪙 <span class="cost">1200</span></span>
+                    <button class= "buy-button" id = "p-buy">購入</button>
+                </div>
+            </div>
+
+            <div class="item-card buff" id="item1-card" data-price="1" data-currency="potato">
+                <div class="item-icon">🪙➕</div>
+                <h3>コイン入手倍率強化</h3>
+                <p class="description">コインの入手量を+1倍強化します。</p>
+                <div class="price-section">
+                    <span class="price-tag">🥔 <span class="cost">1</span></span>
+                    <button class= "buy-button" id = "c-buff-buy">購入</button>
+                </div>
+            </div>
+
+            <div class="item-card buff" id="item3-card" data-price="5" data-currency="potato">
+                <div class="item-icon">🥔➕</div>
+                <h3>ポテト入手量増加</h3>
+                <p class="description">ポテトの入手量が+1増加します。</p>
+                <div class="price-section">
+                    <span class="price-tag">🥔 <span class="cost">5</span></span>
+                    <button class= "buy-button" id="p-buff-buy">購入</button>
+                </div>
+            </div>
+
+            <div class="item-card special" id="coin-pack-card" data-price="10000" data-currency="coins">
+                <div class="item-icon">💎</div>
+                <h3>超大量コインパック</h3>
+                <p class="description">ポテト100個！スロットを回しまくろう！</p>
+                <div class="price-section">
+                    <span class="price-tag">💰 <span class="cost">10,000</span></span>
+                    <button class="buy-button" onclick="purchaseItem('coin-pack', 10000, 'potato')">購入</button>
+                </div>
+            </div>
+            
+        </main>
+
+        <footer class="shop-footer">
+            <button id="back-to-slot" class="back-button">スロット画面に戻る</button>
+        </footer>
+
+    </div>
+
+    <script src="shop.js"></script>
+</body>
+</html>

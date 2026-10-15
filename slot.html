@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/slot.css">
+
+    <title>こばたくスロット</title>
+</head>
+
+<body>
+    <h1 id="g-title">こばたくスロット</h1><br>
+    <div class="main-container">
+        <div id="slot-machine">
+            <div id=S_top>
+                <img id="S1" src="img/home.jpg" alt="0">
+                <img id="S2" src="img/home.jpg" alt="0">
+                <img id="S3" src="img/home.jpg" alt="0">
+            </div>
+            <div id=S_middle>
+                <img id="S4" src="img/home.jpg" alt="0">
+                <img id="S5" src="img/home.jpg" alt="0">
+                <img id="S6" src="img/home.jpg" alt="0">
+            </div>
+            <div id=S_bottom>
+                <img id="S7" src="img/home.jpg" alt="0">
+                <img id="S8" src="img/home.jpg" alt="0">
+                <img id="S9" src="img/home.jpg" alt="0">
+            </div>
+        </div>
+        <div id="probability-display">
+            <p id="prob-text"></p>
+            <div id="status-display">
+                <h2>所持品</h2>
+                <p>コイン: <span id="coins">100</span></p>
+                <p>ポテト: <span id="potato">0</span></p>
+                <p>コイン入手倍率強化: <span id="c_buff">0</span></p>
+                <p>ポテト入手量増加: <span id="p_buff">0</span></p>
+                <p>連続外れ数: <span id="streak">0</span></p>
+            </div>
+        </div>
+    </div>
+    <div id=slotbutton>
+        <button id="start">play:10coins</button>
+        <button id="tigyu">?????????</button>
+        <button id="reset">reset</button>
+        <button id="save">save</button>
+        <button id="delete">delete</button>
+    </div>
+
+
+    <button id="shop">ぽてとショップ</button>
+    <div id="shopbutton">
+        <button id=hard>呪い確率強化(ポテト入手量増加)</button>
+        <button id="item2">しのせん出現確率上昇:10potato</button>
+    </div>
+    <script src="slot.js"></script>
+</body>
+
+</html>

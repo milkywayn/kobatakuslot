@@ -1,0 +1,170 @@
+/* ベーススタイルとゲーム風のフォント設定 */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0d1a2d; /* 暗い背景 */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#shop-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #1a2b40; /* 画面のメインカラー */
+    border: 4px solid #ffd700; /* ゴールデンな枠線 */
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4); /* 光沢感 */
+    padding: 20px;
+}
+
+/* ヘッダーと通貨表示 */
+.shop-header {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #00bfff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.shop-header h1 {
+    margin: 0 0 10px 0;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+.user-currency p {
+    margin: 5px 0;
+    background-color: #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* カテゴリタブ (調整なし) */
+.shop-tabs {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    flex-grow: 1;
+    padding: 10px 15px;
+    background-color: #0f1c30;
+    color: #ffffff;
+    border: 2px solid #2c3e50;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.tab-button:hover {
+    background-color: #2c3e50;
+}
+
+.tab-button.active {
+    background-color: #00bfff;
+    border-color: #00ffff;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* アイテムリストコンテナ */
+#item-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* アイテムカード */
+.item-card {
+    background-color: #2c3e50;
+    border: 2px solid #00bfff;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.item-card:hover:not(.disabled) {
+    transform: translateY(-5px);
+    border-color: #ffd700;
+}
+
+.item-icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 0.9em;
+    color: #bbbbbb;
+    margin: 10px 0;
+}
+
+.price-section {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.price-tag {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+/* 購入ボタン */
+.buy-button {
+    background-color: #ff416c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.buy-button:hover:not(.disabled) {
+    background-color: #ff6891;
+}
+
+.buy-button.disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+/* フッター */
+.shop-footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px dashed #2c3e50;
+}
+
+.back-button {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #4a5d7c;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+/* 非表示アイテム (JavaScriptで切り替え) */
+.item-card:not(.active) {
+    display: none;
+}

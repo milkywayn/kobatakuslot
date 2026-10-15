@@ -1,0 +1,120 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+#g-title {
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(18, 17, 17, 0.7);
+    animation: pulse 2s infinite alternate;
+}
+
+/* スロット + 確率表示のメインコンテナ */
+.main-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+/* スロット盤面 */
+#slot-machine {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#S_top, #S_middle, #S_bottom {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin:5px 0;
+}
+
+.s_row {
+    display: flex;
+    gap: 10px;
+}
+
+img {
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    height: 150px;
+}
+
+/* 確率表示 */
+#probability-display {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    min-width: 250px;
+    text-align: left;
+    line-height: 30px;
+}
+
+#status-display {
+    min-width: 250px;
+    text-align: left;
+    line-height: 20px;
+}
+
+#slotbutton button{
+    width: 200px;
+    height: 100px;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#shopbutton button{
+    width: 200px;
+    height: 100px;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#shop {
+    margin-top: 30px;
+    border-top: 2px solid #333;
+    padding-top: 20px;
+    animation: pulse 2s infinite alternate;
+}
+@keyframes pulse {
+    from {
+        opacity: 1.25;
+        transform: scale(1.25);
+    }
+    to {
+        opacity: 0.8;
+        transform: scale(1.02);
+    }
+}
